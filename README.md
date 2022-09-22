@@ -26,23 +26,23 @@ To get your Api key, you need to register in Coinbase Commecre and get your key 
 ### Quick example of account creation and payment verification  
 Every 5 seconds the code will check the payment:  
 ``` python
-from CoinbaseAPI import CoinbaseAPI  
-from time import sleep  
+from CoinbaseAPI import CoinbaseAPI
+from time import sleep
 
-api_key = "YOUR_API_KEY"  
-api = CoinbaseAPI(api_key)  
+api_key = "YOUR_API_KEY"
+api = CoinbaseAPI(api_key)
 
-payment = api.create_charge("Test title"", "Test description", 5.00, "USD")  
-print(payment.url)  
+payment = api.create_charge("Test title"", "Test description", 5.00, "USD")
+print(payment.url)
 
-while True:  
-    if payment.is_paid():  
-        print("Payment is paid!")  
-        break  
-        
-    sleep(5)  
+while True:
+    if payment.is_paid():
+        print("Payment is paid!")
+        break
+
+    sleep(5)
 ```
 
-## License
+## License  
 
 GNU General Public License (GPL)  
