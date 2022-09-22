@@ -32,7 +32,7 @@ from time import sleep
 api_key = "YOUR_API_KEY"
 api = CoinbaseAPI(api_key)
 
-payment = api.create_charge("Test title"", "Test description", 5.00, "USD")
+payment = api.create_charge("Test title", "Test description", 5.00, "USD")
 print(payment.url)
 
 while True:
